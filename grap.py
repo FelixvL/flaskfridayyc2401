@@ -15,12 +15,7 @@ def functie_een():
     ]
     random.shuffle(grappen)
 
-    i = 0
-    while grappen:
-        huidige_grap = grappen.pop()
-        print(huidige_grap)
-        i += 1
-        input("Druk op Enter voor de volgende grap...")
-        if i == 10:
-            break
-    return "hoi"
+    return grappen[1]
+    
+    
+    

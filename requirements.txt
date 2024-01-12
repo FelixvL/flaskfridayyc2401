@@ -1,0 +1,4 @@
+flask 
+random
+flask-cors
+requests
