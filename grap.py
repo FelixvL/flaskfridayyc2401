@@ -1,4 +1,4 @@
-def functieeen():
+def functie_een():
     import random
     grappen = [
         "Waarom kunnen geheimagenten nooit goed schaken? Omdat ze altijd bang zijn voor lopers!",
@@ -15,7 +15,12 @@ def functieeen():
     ]
     random.shuffle(grappen)
 
+    i = 0
     while grappen:
         huidige_grap = grappen.pop()
         print(huidige_grap)
+        i += 1
         input("Druk op Enter voor de volgende grap...")
+        if i == 10:
+            break
+    return "hoi"
