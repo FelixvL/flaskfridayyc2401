@@ -23,9 +23,9 @@ def hondenfeitenfunc():
     return hondenfeiten.functie_een()
 
 
-@app.route("/telletter")
-def telletterfunc():
-    return telletter.functie_een()   
+@app.route("/telletter/<input>")
+def telletterfunc(input):
+    return telletter.functie_een(input)   
 
 @app.route("/grap")
 def grapfunc():
