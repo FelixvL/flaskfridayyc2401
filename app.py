@@ -5,6 +5,7 @@ import guess
 import hondenfeiten
 import telletter
 import grap
+import btcprice
 
 app = Flask(__name__)
 CORS(app)
@@ -30,3 +31,7 @@ def telletterfunc(input):
 @app.route("/grap")
 def grapfunc():
     return grap.functie_een()             
+
+@app.route("/btcprice")
+def btcpricef():
+    return btcprice.btcpricef() 
