@@ -1,10 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
 
-import calculator
+import guess
 import hondenfeiten
 import telletter
 import grap
+import btcprice
 
 app = Flask(__name__)
 CORS(app)
@@ -14,13 +15,13 @@ CORS(app)
 def hello_world():
     return "<p>Hij doet  het YC 2401</p>"
 
-@app.route("/calculator")
-def calculatorfunc():
-    return calculator.functie_een()
+@app.route("/guess")
+def guessfunc():
+    return guess.functie_een()
 
 @app.route("/hondenfeiten")
 def hondenfeitenfunc():
-    return hondenfeiten.functie_een()
+     return hondenfeiten.functie_een()
 
 
 @app.route("/telletter/<input>")
@@ -30,3 +31,7 @@ def telletterfunc(input):
 @app.route("/grap")
 def grapfunc():
     return grap.functie_een()             
+
+@app.route("/btcprice")
+def btcpricef():
+    return btcprice.btcpricef() 
