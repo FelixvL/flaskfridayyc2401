@@ -2,9 +2,9 @@ from flask import Flask
 from flask_cors import CORS
 
 import guess
-# import hondenfeiten
-# import telletter
-# import grap
+import hondenfeiten
+import telletter
+import grap
 
 app = Flask(__name__)
 CORS(app)
@@ -18,15 +18,15 @@ def hello_world():
 def guessfunc():
     return guess.functie_een()
 
-# @app.route("/hondenfeiten")
-# def hondenfeitenfunc():
-#     return hondenfeiten.functie_een()
+@app.route("/hondenfeiten")
+def hondenfeitenfunc():
+     return hondenfeiten.functie_een()
 
 
-# @app.route("/telletter")
-# def telletterfunc():
-#     return telletter.functie_een()   
+@app.route("/telletter/<input>")
+def telletterfunc(input):
+    return telletter.functie_een(input)   
 
-# @app.route("/grap")
-# def grapfunc():
-#     return grap.functie_een()             
+@app.route("/grap")
+def grapfunc():
+    return grap.functie_een()             
